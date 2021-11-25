@@ -23,9 +23,11 @@ namespace comida
 
         public ObservableCollection<String> TipoComida
         {
-            get {
-               
-                return tipoComida; }
+            get
+            {
+
+                return tipoComida;
+            }
             set
             {
                 tipoComida = value;
@@ -33,19 +35,22 @@ namespace comida
             }
         }
 
-        public ObservableCollection<String> CrearListaItems(ObservableCollection<String> TipoComida)
+        public void CrearListaItems()
         {
             TipoComida.Add("China");
             TipoComida.Add("Mejicana");
             TipoComida.Add("Americana");
-            return TipoComida;
+
         }
+
+       
 
 
         public MainWindowVM()
         {
-            Comidas = new ObservableCollection<Plato>();
-          
+            Comidas = Plato.GetSamples(@"D:\2DAM\DInt\UD5\ut5_actv1_recursos\FotosPlatos");
+            CrearListaItems();
+
 
         }
         public event PropertyChangedEventHandler PropertyChanged;
