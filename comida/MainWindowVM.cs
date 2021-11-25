@@ -48,7 +48,8 @@ namespace comida
 
         public MainWindowVM()
         {
-            Comidas = Plato.GetSamples(@"D:\2DAM\DInt\UD5\ut5_actv1_recursos\FotosPlatos");
+            /*Cambiar esto depende de estar en casa o en el insti casa-->J clase--->D*/
+            Comidas = Plato.GetSamples(@"J:\2DAM\DInt\UD5\ut5_actv1_recursos\FotosPlatos");
             CrearListaItems();
 
 

@@ -27,7 +27,7 @@
             <Button Content="Limpiar Seleccion" Margin="20,20,136,20"></Button>
         </StackPanel>
         </Border>
-        <ListBox ItemsSource="{Binding Path=Comidas}">
+        <ListBox ItemsSource="{Binding Path=Comidas}" Width="468" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel></WrapPanel>
@@ -36,9 +36,10 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderThickness="2" BorderBrush="Black" Margin="10">
-                        <StackPanel>
+                        <StackPanel Orientation="Vertical">
                     <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
-                        <Image Stretch="UniformToFill" Width="200" Height="200" Source="{Binding Path=Imagen}"></Image>
+                        <Image Width="150" Stretch="UniformToFill"  Source="{Binding Path=Imagen}"></Image>
+                            <Image Source=""
                         </StackPanel>
                     </Border>
                 </DataTemplate>
