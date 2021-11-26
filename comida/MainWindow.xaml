@@ -37,9 +37,8 @@
                 <DataTemplate>
                     <Border BorderThickness="2" BorderBrush="Black" Margin="10">
                         <StackPanel Orientation="Vertical">
-                    <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
-                        <Image Width="150" Stretch="UniformToFill"  Source="{Binding Path=Imagen}"></Image>
-                            <Image Source=""
+                            <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
+                            <Image Width="150" Stretch="UniformToFill"  Source="{Binding Path=Imagen}"></Image>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
