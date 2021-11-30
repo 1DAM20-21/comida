@@ -30,7 +30,7 @@
         <ListBox ItemsSource="{Binding Path=Comidas}" Width="468" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel></WrapPanel>
+                    <WrapPanel Orientation="Horizontal"></WrapPanel>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
@@ -38,7 +38,8 @@
                     <Border BorderThickness="2" BorderBrush="Black" Margin="10">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="{Binding Path=Nombre}"></TextBlock>
-                            <Image Width="150" Stretch="UniformToFill"  Source="{Binding Path=Imagen}"></Image>
+                        <Image Width="150" Stretch="UniformToFill"  Source="{Binding Path=Imagen}"></Image>
+                        <Image/>
                         </StackPanel>
                     </Border>
                 </DataTemplate>

@@ -8,6 +8,17 @@ namespace comida
     {
         private ObservableCollection<Plato> comidas;
         private ObservableCollection<String> tipoComida = new ObservableCollection<string>();
+        private Plato platoSeleccionado;
+
+       
+
+        public Plato PlatoSeleccionado
+        {
+            get { return platoSeleccionado; }
+            set { platoSeleccionado = value;
+                NotifyPropertyChanged("PlatoSeleccionado");
+                   }
+        }
 
 
 
@@ -43,8 +54,11 @@ namespace comida
 
         }
 
-       
 
+        public void QuitarSeleccionado()
+        {
+            PlatoSeleccionado = null;
+        }
 
         public MainWindowVM()
         {
